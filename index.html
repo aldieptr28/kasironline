@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Kasir Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Kasir Online | Toko Kak Seleb</h1>
+
+        <div class="product-form">
+            <h2>Tambah Produk</h2>
+            <input type="text" id="productName" placeholder="Nama Produk">
+            <input type="number" id="productPrice" placeholder="Harga Produk">
+            <button id="addProductBtn">Tambah Produk</button>
+        </div>
+
+        <div class="search-form">
+            <h2>Cari Produk</h2>
+            <input type="text" id="searchInput" placeholder="Cari Produk">
+        </div>
+
+        <div class="product-list">
+            <h2>Daftar Produk</h2>
+            <ul id="productList"></ul>
+        </div>
+
+        <div class="cart">
+            <h2>Keranjang</h2>
+            <ul id="cartList"></ul>
+            <div class="total">
+                <h3>Total: <span id="totalPrice">0</span></h3>
+                <input type="number" id="paidAmount" placeholder="Jumlah Uang Dibayar">
+                <button id="checkoutBtn">Checkout</button>
+            </div>
+        </div>
+
+        <div class="receipt">
+            <h2>Nota</h2>
+            <pre id="receiptOutput"></pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+
+</body>
+
+<footer>
+    <p>Dibuat oleh Mas Aldi Putra Pratama</p>
+</footer>
+
+</html>
