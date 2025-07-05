@@ -1,3 +1,4 @@
+/* Umum */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -16,8 +17,11 @@ body {
 h1 {
     text-align: center;
     color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
+/* Form Tambah Produk dan Pencarian */
 .product-form,
 .search-form,
 .product-list,
@@ -28,20 +32,24 @@ h1 {
 .product-form input,
 .search-form input,
 .total input {
-    padding: 5px;
+    padding: 10px;
     margin-right: 10px;
-    width: 100%;
+    width: calc(100% - 20px);
     box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .product-form button,
 .total button {
-    padding: 5px 10px;
+    padding: 10px 20px;
     background-color: #28a745;
     color: #fff;
     border: none;
     cursor: pointer;
     margin-top: 10px;
+    border-radius: 4px;
 }
 
 .product-form button:hover,
@@ -49,13 +57,63 @@ h1 {
     background-color: #218838;
 }
 
-.product-list ul,
+/* Daftar Produk yang Dapat Digulir */
+.product-list {
+    margin-bottom: 20px;
+}
+
+.scrollable-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.product-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-list button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+.product-list button:hover {
+    background-color: #0056b3;
+}
+
+.product-list button:nth-child(2) {
+    background-color: #dc3545;
+}
+
+.product-list button:nth-child(2):hover {
+    background-color: #c82333;
+}
+
+/* Keranjang Belanja */
+.cart {
+    margin-top: 30px;
+}
+
 .cart ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.product-list li,
 .cart li {
     padding: 10px;
     border-bottom: 1px solid #ddd;
@@ -64,21 +122,20 @@ h1 {
     align-items: center;
 }
 
-.product-list button,
 .cart button {
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: #dc3545;
     color: #fff;
     border: none;
     cursor: pointer;
-    margin-left: 10px;
+    border-radius: 4px;
 }
 
-.product-list button:hover,
 .cart button:hover {
-    background-color: #0056b3;
+    background-color: #c82333;
 }
 
+/* Total dan Checkout */
 .total {
     margin-top: 20px;
     text-align: right;
@@ -86,9 +143,11 @@ h1 {
 
 .total input {
     margin-bottom: 10px;
-    padding: 5px;
-    width: calc(100% - 120px);
+    padding: 10px;
+    width: 100%;
     box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .total button {
@@ -97,28 +156,57 @@ h1 {
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
 }
 
+.total button:hover {
+    background-color: #0056b3;
+}
+
+/* Nota Transaksi */
 .receipt {
     margin-top: 30px;
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     display: none;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .receipt pre {
     white-space: pre-wrap;
-    font-family: 'Courier New', Courier, monospace;
     color: #333;
+    font-size: 14px;
 }
 
-/* Styling untuk pencarian */
+.receipt h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Pencarian */
 .search-form input {
-    padding: 5px;
-    width: 100%;
+    padding: 10px;
+    width: calc(100% - 20px);
     margin-bottom: 10px;
     box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 /* Media queries untuk layar kecil (max-width: 600px) */
@@ -175,17 +263,4 @@ h1 {
     .receipt pre {
         font-size: 12px;
     }
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    margin-top: 30px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
 }
